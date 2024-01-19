@@ -28,6 +28,7 @@
     gcc
     gnumake
 
+    libva
     bleachbit # cache cleaner
     cmatrix
     gparted
