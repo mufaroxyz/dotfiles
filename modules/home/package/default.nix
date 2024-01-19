@@ -28,7 +28,7 @@
     gcc
     gnumake
 
-    libva
+    libva # video acceleration
     bleachbit # cache cleaner
     cmatrix
     gparted
