@@ -6,6 +6,8 @@
 
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
 
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
