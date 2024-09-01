@@ -8,6 +8,8 @@
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
