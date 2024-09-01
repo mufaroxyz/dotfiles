@@ -47,6 +47,8 @@
     egl-wayland
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    inputs.zen-browser.packages.${pkgs.system}.default
+    rose-pine-cursor
   ];
 
   environment.variables.EDITOR = "nvim";

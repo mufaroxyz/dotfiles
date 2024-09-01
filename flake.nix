@@ -4,14 +4,19 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+    home-manager = {
+        url = "github:nix-community/home-manager/master";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
+    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+
+    zen-browser = {
+      url = "github:ch4og/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
