@@ -19,6 +19,11 @@
       url = "github:ch4og/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Requires access to ghostty-org
+    ghostty = {
+      url = "git+ssh://git@github.com/ghostty-org/ghostty";
+    };
   };
 
   outputs = inputs@{ home-manager, nixpkgs, ... }: {
