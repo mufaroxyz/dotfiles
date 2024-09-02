@@ -25,24 +25,24 @@
 
 	nixosConfigurations = {
 	  Mufaro = nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
+      system = "x86_64-linux";
 	    specialArgs = {
 	      inherit inputs;
 	    };
 	    modules = [
-              ./hosts/Mufaro/configuration.nix
-	      ./modules/system
+        ./hosts/Mufaro/configuration.nix
+	      ./system
 
 	      home-manager.nixosModules.home-manager
 	      {
-		home-manager = {
-		  extraSpecialArgs = {
-		    inherit inputs;
-		  };
-		  	useGlobalPkgs = true;
-		  	useUserPackages = true;
-		  	backupFileExtension = "backup";
-		  	users.mufaro = import ./hosts/Mufaro/home.nix;
+					home-manager = {
+		  			extraSpecialArgs = {
+		    			inherit inputs;
+		  			};
+						useGlobalPkgs = true;
+						useUserPackages = true;
+						backupFileExtension = "backup";
+						users.mufaro = import ./hosts/Mufaro/home.nix;
 	        };
 	      }
 	    ];
