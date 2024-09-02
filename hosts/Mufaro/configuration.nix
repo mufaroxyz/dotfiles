@@ -49,6 +49,7 @@
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     inputs.zen-browser.packages.${pkgs.system}.default
     rose-pine-cursor
+    qt6.qtwayland
   ];
 
   environment.variables.EDITOR = "nvim";
