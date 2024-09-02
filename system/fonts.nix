@@ -13,5 +13,6 @@
     noto-fonts
     noto-fonts-emoji
     cascadia-code
+    iosevka
   ];
 }

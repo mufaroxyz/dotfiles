@@ -35,21 +35,9 @@
           inherit inputs;
         };
         modules = [
-          ./hosts/Mufaro/configuration.nix
+          ./hosts/Mufaro
           ./system
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              extraSpecialArgs = {
-                inherit inputs;
-              };
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
-              users.mufaro = import ./hosts/Mufaro/home.nix;
-            };
-          }
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
     };
