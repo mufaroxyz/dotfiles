@@ -1,31 +1,32 @@
 { pkgs, ... }:
 
 {
-	home.username = "mufaro";
-	home.homeDirectory = "/home/mufaro";
+  home.username = "mufaro";
+  home.homeDirectory = "/home/mufaro";
 
-	# wayland.windowManager.hyprland.enable = true;
+  # wayland.windowManager.hyprland.enable = true;
 
 
-	home.packages = with pkgs; [
-		kitty
-		vesktop
-		grim
-		slurp
-		pavucontrol
-		spotify
-		fastfetch
-		(pkgs.discord.override {
-		    withOpenASAR = true;
-				withVencord = true;
-		})
-		krita
-		wf-recorder
-		obs-studio
-		btop
-	];
+  home.packages = with pkgs; [
+    kitty
+    vesktop
+    grim
+    slurp
+    pavucontrol
+    spotify
+    fastfetch
+    (pkgs.discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
+    krita
+    wf-recorder
+    obs-studio
+    btop
+    nixpkgs-fmt
+  ];
 
-	home.pointerCursor = {
+  home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
     package = pkgs.rose-pine-cursor;
@@ -34,36 +35,36 @@
   };
 
 
-	programs.git = {
-		enable = true;
-		userName = "mufaroxyz";
-		userEmail = "81554673+mufaroxyz@users.noreply.github.com";
-		extraConfig = {
-		  gpg.format = "ssh";
-			user.signingKey = "~/.ssh/id_ed25519.pub";
-			commit.gpgsign = true;
-			url."ssh://git@".pushInsteadOf = "https://";
-		};
-	};
-	
-	programs.vscode = {
-	    enable = true;
-			extensions = with pkgs.vscode-extensions; [
-		    wakatime.vscode-wakatime
-				github.copilot
-				ziglang.vscode-zig
-				jnoortheen.nix-ide
-				yoavbls.pretty-ts-errors
-				# no gruber theme :(
-		];
-	};
+  programs.git = {
+    enable = true;
+    userName = "mufaroxyz";
+    userEmail = "81554673+mufaroxyz@users.noreply.github.com";
+    extraConfig = {
+      gpg.format = "ssh";
+      user.signingKey = "~/.ssh/id_ed25519.pub";
+      commit.gpgsign = true;
+      url."ssh://git@".pushInsteadOf = "https://";
+    };
+  };
 
-	programs.bash = {
-		enable = true;
-		enableCompletion = true;
-	};
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      wakatime.vscode-wakatime
+      github.copilot
+      ziglang.vscode-zig
+      jnoortheen.nix-ide
+      yoavbls.pretty-ts-errors
+      # no gruber theme :(
+    ];
+  };
 
-	home.stateVersion = "24.05";
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+  };
 
-	programs.home-manager.enable = true;
+  home.stateVersion = "24.05";
+
+  programs.home-manager.enable = true;
 }
