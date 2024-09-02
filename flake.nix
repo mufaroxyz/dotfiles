@@ -39,10 +39,10 @@
 		  extraSpecialArgs = {
 		    inherit inputs;
 		  };
-		  useGlobalPkgs = true;
-		  useUserPackages = true;
-		  backupFileExtension = "backup";
-		  users.mufaro = import ./hosts/Mufaro/home.nix;
+		  	useGlobalPkgs = true;
+		  	useUserPackages = true;
+		  	backupFileExtension = "backup";
+		  	users.mufaro = import ./hosts/Mufaro/home.nix;
 	        };
 	      }
 	    ];

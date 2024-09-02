@@ -6,6 +6,7 @@
 
 	# wayland.windowManager.hyprland.enable = true;
 
+
 	home.packages = with pkgs; [
 		kitty
 		vesktop
@@ -16,7 +17,7 @@
 		fastfetch
 		(pkgs.discord.override {
 		    withOpenASAR = true;
-			withVencord = true;
+				withVencord = true;
 		})
 		krita
 		wf-recorder
@@ -24,12 +25,13 @@
 	];
 
 	home.pointerCursor = {
-        gtk.enable = true;
-        x11.enable = true;
-        package = pkgs.rose-pine-cursor;
-        name = "BreezeX-RosePine-Linux";
-        size = 16;
-    };
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.rose-pine-cursor;
+    name = "BreezeX-RosePine-Linux";
+    size = 16;
+  };
+
 
 	programs.git = {
 		enable = true;
@@ -42,13 +44,23 @@
 			url."ssh://git@".pushInsteadOf = "https://";
 		};
 	};
+	
+	programs.vscode = {
+	    enable = true;
+			extensions = with pkgs.vscode-extensions; [
+		    wakatime.vscode-wakatime
+				github.copilot
+				ziglang.vscode-zig
+				jnoortheen.nix-ide
+				yoavbls.pretty-ts-errors
+				# no gruber theme :(
+		];
+	};
 
 	programs.bash = {
 		enable = true;
 		enableCompletion = true;
 	};
-
-
 
 	home.stateVersion = "24.05";
 
