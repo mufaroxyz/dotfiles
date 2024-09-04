@@ -19,5 +19,6 @@
     nixpkgs-fmt
     nvtopPackages.full
     easyeffects
+    dolphin
   ];
 }
