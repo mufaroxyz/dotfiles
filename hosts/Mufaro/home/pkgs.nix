@@ -17,5 +17,7 @@
     obs-studio
     btop
     nixpkgs-fmt
+    nvtopPackages.full
+    easyeffects
   ];
 }
