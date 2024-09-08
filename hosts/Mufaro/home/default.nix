@@ -7,6 +7,7 @@
     imports = [
       (import ./pkgs.nix { inherit pkgs inputs; })
       (import ./config.nix { inherit pkgs inputs; })
+      (import ./config/default.nix { inherit pkgs inputs; })
     ];
 
     home.homeDirectory = "/home/${username}";

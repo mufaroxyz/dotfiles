@@ -1,5 +1,7 @@
 { pkgs, inputs, ... }:
 {
+  imports = [ inputs.aagl.nixosModules.default ];
+
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
@@ -20,7 +22,10 @@
     enable = true;
     enableSSHSupport = true;
   };
+ 
 
   programs.gamemode.enable = true;
 
+  nix.settings = inputs.aagl.nixConfig;
+  programs.sleepy-launcher.enable = true;
 }
