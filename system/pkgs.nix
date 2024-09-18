@@ -18,6 +18,8 @@ let
     inputs.ghostty.packages.${pkgs.system}.default
     rose-pine-cursor
     qt6.qtwayland
+    wrangler
+    mako
   ];
 in
 packages

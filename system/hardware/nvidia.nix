@@ -14,12 +14,10 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    dynamicBoost.enable = false;
     powerManagement.enable = true;
-    powerManagement.finegrained = false;
-    open = true;
+    open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
