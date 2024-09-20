@@ -1,8 +1,12 @@
 {
-  description = "Mufaro's NixOS configuration";
+  description = "Mufaro NixOS nya~";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nur.url = "github:nix-community/nur";
+
+    hypr-contrib.url = "github:hyprwm/contrib";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -25,27 +29,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+
     # Requires access to ghostty-org
     ghostty = {
       url = "git+ssh://git@github.com/ghostty-org/ghostty";
     };
   };
 
-  outputs = inputs@{ home-manager, nixpkgs, ... }: {
-
-    nixosConfigurations = {
-      Mufaro = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
+  outputs =
+    { nixpkgs
+    , self
+    , ...
+    } @ inputs:
+    let
+      selfPkgs = import ./pkgs;
+      username = "mufaro";
+    in
+    {
+      overlays.default = selfPkgs.overlay;
+      nixosConfigurations = import ./modules/core/default.nix
+        {
+          inherit self nixpkgs inputs username;
         };
-        modules = [
-          ./hosts/Mufaro
-          ./system
-          inputs.home-manager.nixosModules.home-manager
-        ];
-      };
     };
-
-  };
 }
