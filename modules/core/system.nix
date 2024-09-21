@@ -17,6 +17,8 @@
         "flakes"
         "nix-command"
       ];
+      max-jobs = 6;
+      cores = 6;
       auto-optimise-store = true;
       keep-outputs = true;
     };

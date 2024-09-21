@@ -31,6 +31,7 @@ in
         ++ [ (import ./wayland.nix) ]
         ++ [ (import ./system.nix) ]
         ++ [ (import ./nvidia.nix) ]
+        ++ [ (import ./activation.nix) ]
         ++ [ (import ./../../hosts/nixos/hardware-configuration.nix) ];
     };
 }
