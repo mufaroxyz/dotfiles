@@ -13,20 +13,22 @@ let
   lib = nixpkgs.lib;
 in
 {
-  nixos = nixpkgs.lib.nixOsSystem
+  nixos = nixpkgs.lib.nixosSystem
     {
       specialArgs = { inherit self inputs username; };
       modules =
-        [ (import ./bootloader.nix) ]
+        [ (import ./boot.nix) ]
         ++ [ (import ./hardware.nix) ]
         ++ [ (import ./xserver.nix) ]
-        ++ [ (import ./locales.nix) ]
+        ++ [ (import ./steam.nix) ]
         ++ [ (import ./networking.nix) ]
+        ++ [ (import ./pipewire.nix) ]
+        ++ [ (import ./programs.nix) ]
+        ++ [ (import ./security.nix) ]
         ++ [ (import ./services.nix) ]
         ++ [ (import ./user.nix) ]
         ++ [ (import ./wayland.nix) ]
         ++ [ (import ./system.nix) ]
-        ++ [ (import ./pipewire.nix) ]
         ++ [ (import ./../../hosts/mufaro/hardware-configuration.nix) ];
     };
 }
