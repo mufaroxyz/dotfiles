@@ -35,6 +35,7 @@
       # Nixos
       cdnix = "cd ~/config && code-insiders ~/config";
       nix-shell = "nix-shell --run zsh";
+      nix-develop = "nix develop -c zsh";
       nix-switch = "nixos-rebuild switch --flake ~/config#nixos --use-remote-sudo";
       nix-switchu = "nixos-rebuild switch --upgrade --flake ~/config#nixos --use-remote-sudo";
       nix-flake-update = "nix flake update --flake ~/config";
