@@ -5,7 +5,7 @@ let
 in
 {
   wayland.windowManager.hyprland.settings = {
-    "$mod" = "SUPER";
+    "$mainMod" = "SUPER";
     monitor = ",1920x1080@72,0x0,1";
 
     exec-once = [
@@ -40,8 +40,8 @@ in
     };
 
     general = {
-      sensitivity = 1.00;
-      apply_sens_to_raw = 1;
+      # sensitivity = 1.00;
+      # apply_sens_to_raw = 1;
       gaps_in = 5;
       gaps_out = 10;
       border_part_of_window = false;
@@ -62,7 +62,7 @@ in
     };
 
     master = {
-      new_is_master = true;
+      # new_is_master = true;
       special_scale_factor = 1.0;
       no_gaps_when_only = false;
     };
@@ -183,19 +183,19 @@ in
       "$mainMod, down, movefocus, d"
 
       # media and volume controls
-      "XF86AudioRaiseVolume,exec, pamixer -i 2"
-      "XF86AudioLowerVolume,exec, pamixer -d 2"
-      "XF86AudioMute,exec, pamixer -t"
-      "XF86AudioPlay,exec, playerctl play-pause"
-      "XF86AudioNext,exec, playerctl next"
-      "XF86AudioPrev,exec, playerctl previous"
-      "XF86AudioStop, exec, playerctl stop"
+      # "XF86AudioRaiseVolume,exec, pamixer -i 2"
+      # "XF86AudioLowerVolume,exec, pamixer -d 2"
+      # "XF86AudioMute,exec, pamixer -t"
+      # "XF86AudioPlay,exec, playerctl play-pause"
+      # "XF86AudioNext,exec, playerctl next"
+      # "XF86AudioPrev,exec, playerctl previous"
+      # "XF86AudioStop, exec, playerctl stop"
       "$mainMod, mouse_down, workspace, e-1"
       "$mainMod, mouse_up, workspace, e+1"
 
       # screenshot
       "$mainMod, Print, exec, grimblast --notify --cursor save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
-      "Print, exec, grimblast --notify --cursor copy area"
+      # "Print, exec, grimblast --notify --cursor copy area"
     ];
 
     bindm = [

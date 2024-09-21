@@ -21,6 +21,7 @@ in
         ++ [ (import ./hardware.nix) ]
         ++ [ (import ./xserver.nix) ]
         ++ [ (import ./steam.nix) ]
+        ++ [ (import ./sleepy-launcher.nix) ]
         ++ [ (import ./networking.nix) ]
         ++ [ (import ./pipewire.nix) ]
         ++ [ (import ./programs.nix) ]
@@ -29,6 +30,7 @@ in
         ++ [ (import ./user.nix) ]
         ++ [ (import ./wayland.nix) ]
         ++ [ (import ./system.nix) ]
-        ++ [ (import ./../../hosts/mufaro/hardware-configuration.nix) ];
+        ++ [ (import ./nvidia.nix) ]
+        ++ [ (import ./../../hosts/nixos/hardware-configuration.nix) ];
     };
 }

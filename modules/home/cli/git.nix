@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   programs.git = {
+    enable = true;
     userName = "mufaroxyz";
     userEmail = "81554673+mufaroxyz@users.noreply.github.com";
     extraConfig = {
@@ -12,5 +13,5 @@
     };
   };
 
-  home.packages = [ pkgs.gh ];
+  home.packages = [ pkgs.gh pkgs.git ];
 }

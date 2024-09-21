@@ -1,1 +1,1 @@
-nixos-rebuild switch --flake .#Mufaro --use-remote-sudo
+nixos-rebuild switch --flake .#nixos --use-remote-sudo
