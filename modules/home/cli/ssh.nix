@@ -1,13 +1,4 @@
-{ pkgs, inputs, ... }:
-{
-  imports = [ inputs.aagl.nixosModules.default ];
-
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
-
+{ pkgs, ... }: {
   programs.ssh = {
     knownHostsFiles = [
       (pkgs.writeText "github.keys" ''
@@ -17,16 +8,4 @@
         			'')
     ];
   };
-
-  programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
-
-  programs.gamemode.enable = true;
-
-  nix.settings = inputs.aagl.nixConfig;
-  programs.sleepy-launcher.enable = true;
 }

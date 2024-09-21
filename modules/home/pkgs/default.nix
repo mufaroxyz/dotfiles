@@ -19,6 +19,9 @@
     gnome.zenity
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     inputs.zen-browser.packages.${pkgs.system}.default
+    krita
+    easyeffects
+    vesktop
 
     xwaylandvideobridge
     egl-wayland

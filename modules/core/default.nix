@@ -1,18 +1,3 @@
-# { pkgs, inputs, ... }:
-# {
-#   imports = [
-#     ./hardware
-#     ./nix
-#     ./boot.nix
-#     ./env.nix
-#     ./fonts.nix
-#     ./locales.nix
-#     ./networking.nix
-#     ./services.nix
-#   ];
-#   system.stateVersion = "24.05";
-# }
-
 { inputs
 , nixpkgs
 , self
