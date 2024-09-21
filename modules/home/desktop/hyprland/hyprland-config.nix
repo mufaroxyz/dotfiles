@@ -195,7 +195,7 @@ in
 
       # screenshot
       "$mainMod, Print, exec, grimblast --notify --cursor save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
-      # "Print, exec, grimblast --notify --cursor copy area"
+      ",Print, exec, grimblast --cursor copy screen"
     ];
 
     bindm = [

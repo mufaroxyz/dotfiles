@@ -31,5 +31,6 @@ in
 {
   _module.args = { inherit custom; };
   imports =
-    [ (import ./waybar.nix) ];
+    [ (import ./waybar.nix) ]
+    ++ [(import ./waybar-config.nix)];
 }
