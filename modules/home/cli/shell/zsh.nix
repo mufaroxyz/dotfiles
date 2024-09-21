@@ -33,14 +33,14 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
-      cdnix = "cd ~/mufaro-nixos && code-insiders ~/mufaro-nixos";
+      cdnix = "cd ~/config && code-insiders ~/config";
       nix-shell = "nix-shell --run zsh";
-      nix-switch = "sudo nixos-rebuild switch --flake ~/mufaro-nixos#nixos";
-      nix-switchu = "sudo nixos-rebuild switch --upgrade --flake ~/mufaro-nixos#nixos";
-      nix-flake-update = "sudo nix flake update ~/mufaro-nixos#";
-      nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/* && nix-collect-garbage && nix-collect-garbage -d";
+      nix-switch = "nixos-rebuild switch --flake ~/config#nixos --use-remote-sudo";
+      nix-switchu = "nixos-rebuild switch --upgrade --flake ~/config#nixos --use-remote-sudo";
+      nix-flake-update = "nix flake update --flake ~/config";
+      # nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/* && nix-collect-garbage && nix-collect-garbage -d";
       # nix-clean = "sudo nix-collect-garbage -d";
-      # nix-cleanold = "sudo nix-collect-garbage --delete-old";
+      nix-cleanold = "sudo nix-collect-garbage --delete-old";
       # nix-cleanboot = "sudo /run/current-system/bin/switch-to-configuration boot";
 
       # Git

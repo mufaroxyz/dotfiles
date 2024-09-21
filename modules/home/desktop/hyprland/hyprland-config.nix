@@ -16,7 +16,7 @@ in
       "wl-paste --primary --watch wl-copy --primary --clear"
       "swaybg -m fill -i $(find ~/Pictures/Wallpapers/ -maxdepth 1 -type f)"
       "sleep 1 && swaylock"
-      "hyprctl setcursor Nordzy-cursors 22"
+      "hyprctl setcursor BreezeX-RosePine-Linux 22"
       "waybar"
       "mako"
     ];
@@ -45,6 +45,7 @@ in
       gaps_in = 5;
       gaps_out = 10;
       border_part_of_window = false;
+      border_size = 2;
       "col.active_border" = "rgb(cba6f7)";
       "col.inactive_border" = "rgba(565f89cc) rgba(9aa5cecc) 45deg";
 
