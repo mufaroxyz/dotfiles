@@ -5,6 +5,7 @@
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
+    pkgs.iosevka
   ];
 
   gtk = {
@@ -30,15 +31,15 @@
       };
     };
     cursorTheme = {
-      name = "Nordzy-cursors";
-      package = pkgs.nordzy-cursor-theme;
+      name = "BreezeX-RosePine-Linux";
+      package = pkgs.rose-pine-cursor;
       size = 22;
     };
   };
 
   home.pointerCursor = {
-    name = "Nordzy-cursors";
-    package = pkgs.nordzy-cursor-theme;
+    name = "BreezeX-RosePine-Linux";
+    package = pkgs.rose-pine-cursor;
     size = 22;
   };
 }
