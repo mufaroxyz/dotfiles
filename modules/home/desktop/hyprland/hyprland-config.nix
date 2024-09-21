@@ -108,26 +108,25 @@ in
       enabled = true;
 
       bezier = [
-        "fluent_decel, 0, 0.2, 0.4, 1"
-        "easeOutCirc, 0, 0.55, 0.45, 1"
-        "easeOutCubic, 0.33, 1, 0.68, 1"
-        "easeinoutsine, 0.37, 0, 0.63, 1"
+        "wind, 0.25, 0.8, 0.25, 1.0"
+        "winIn, 0.1, 1.0, 0.3, 1.0"
+        "winOut, 0.3, 0.5, 0.5, 1.0"
+        "linear, 1.0, 1.0, 1.0, 1.0"
       ];
 
       animation = [
         # Windows
-        "windowsIn, 1, 3, easeOutCubic, popin 30%" # window open
-        "windowsOut, 1, 3, fluent_decel, popin 70%" # window close.
-        # Fade
-        "fadeIn, 1, 3, easeOutCubic" # fade in (open) -> layers and windows
-        "fadeOut, 1, 2, easeOutCubic" # fade out (close) -> layers and windows
-        "fadeSwitch, 0, 1, easeOutCirc" # fade on changing activewindow and its opacity
-        "fadeShadow, 1, 10, easeOutCirc" # fade on changing activewindow for shadows
-        "fadeDim, 1, 4, fluent_decel" # the easing of the dimming of inactive windows
-        "border, 1, 2.7, easeOutCirc" # for animating the border's color switch speed
-        "borderangle, 1, 30, fluent_decel, once" # for animating the border's gradient angle - styles: once (default), loop
-        "workspaces, 1, 4, easeOutCubic, fade" # styles: slide, slidevert, fade, slidefade, slidefadevert
-        "windowsMove, 1, 2, easeinoutsine, slide"
+        "windows, 1, 5, wind, slide" # window open
+        "windowsIn, 1, 5, winIn, slide" # window close.
+        "windowsOut, 1, 4, winOut, slide"
+        "windowsMove, 1, 4, wind, slide"
+        # Border animation: focus effect on window borders
+        "border, 1, 1, linear" # fade in (open) -> layers and windows
+        "borderangle, 1, 25, linear, loop" # fade out (close) -> layers and windows
+        # Fade effects for smooth transitions
+        "fade, 1, 7, default" # fade on changing activewindow for shadows
+        # Workspace switching: fluid transitions between workspaces
+        "workspaces, 1, 4, wind, slidefadehoriz 30%"
       ]; # everything in between, moving, dragging, resizing.
     };
 
