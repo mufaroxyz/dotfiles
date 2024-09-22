@@ -30,7 +30,8 @@ let
 in
 {
   _module.args = { inherit custom; };
-  imports =
-    [ (import ./waybar.nix) ]
-    ++ [(import ./waybar-config.nix)];
+  imports = [
+    ./waybar.nix
+    ./waybar-config.nix
+  ];
 }

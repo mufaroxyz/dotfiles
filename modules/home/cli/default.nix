@@ -2,8 +2,10 @@
 , username
 , ...
 }: {
-  imports = [ (import ./git.nix) ]
-    ++ [ (import ./shell) ]
-    ++ [ (import ./scripts) ]
-    ++ [ (import ./fastfetch) ];
+  imports = [
+    ./git.nix
+    ./shell
+    ./scripts
+    ./fastfetch
+  ];
 }

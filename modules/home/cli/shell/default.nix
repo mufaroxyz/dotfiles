@@ -2,7 +2,8 @@
 , username
 , ...
 }: {
-  imports =
-    [ (import ./starship.nix) ]
-    ++ [ (import ./zsh.nix) ];
+  imports = [
+    ./starship.nix
+    ./zsh.nix
+  ];
 }

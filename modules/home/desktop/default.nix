@@ -2,7 +2,8 @@
 , username
 , ...
 }: {
-  imports = [ (import ./hyprland) ]
-    ++ [ (import ./addons) ]
-  ;
+  imports = [
+    ./addons
+    ./hyprland
+  ];
 }

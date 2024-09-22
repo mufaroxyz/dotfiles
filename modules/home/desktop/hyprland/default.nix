@@ -1,7 +1,8 @@
 { inputs, ... }: {
-  imports =
-    [ (import ./hyprland.nix) ]
-    ++ [ (import ./hyprland-config.nix) ]
-    ++ [ (import ./senv.nix) ]
-    ++ [ inputs.hyprland.homeManagerModules.default ];
+  imports = [
+    ./hyprland.nix
+    ./hyprland-config.nix
+    ./senv.nix
+    inputs.hyprland.homeManagerModules.default
+  ];
 }

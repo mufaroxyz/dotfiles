@@ -2,8 +2,10 @@
 , username
 , ...
 }: {
-  imports = [ (import ./apps) ]
-    ++ [ (import ./cli) ]
-    ++ [ (import ./desktop) ]
-    ++ [ (import ./pkgs) ];
+  imports = [ 
+    ./apps
+    ./cli
+    ./desktop
+    ./pkgs
+  ];
 }

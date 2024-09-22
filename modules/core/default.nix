@@ -17,21 +17,23 @@ in
     {
       specialArgs = { inherit self inputs username; };
       modules =
-        [ (import ./boot.nix) ]
-        ++ [ (import ./hardware.nix) ]
-        ++ [ (import ./xserver.nix) ]
-        ++ [ (import ./steam.nix) ]
-        ++ [ (import ./sleepy-launcher.nix) ]
-        ++ [ (import ./networking.nix) ]
-        ++ [ (import ./pipewire.nix) ]
-        ++ [ (import ./programs.nix) ]
-        ++ [ (import ./security.nix) ]
-        ++ [ (import ./services.nix) ]
-        ++ [ (import ./user.nix) ]
-        ++ [ (import ./wayland.nix) ]
-        ++ [ (import ./system.nix) ]
-        ++ [ (import ./nvidia.nix) ]
-        ++ [ (import ./activation.nix) ]
-        ++ [ (import ./../../hosts/nixos/hardware-configuration.nix) ];
+        [
+          ./boot.nix
+          ./hardware.nix
+          ./xserver.nix
+          ./steam.nix
+          ./sleepy-launcher.nix
+          ./networking.nix
+          ./pipewire.nix
+          ./programs.nix
+          ./security.nix
+          ./services.nix
+          ./user.nix
+          ./wayland.nix
+          ./system.nix
+          ./nvidia.nix
+          ./activation.nix
+          ../../hosts/nixos/hardware-configuration.nix
+        ];
     };
 }
