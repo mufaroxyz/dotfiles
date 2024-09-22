@@ -194,7 +194,7 @@ in
       "$mainMod, mouse_up, workspace, e+1"
 
       # screenshot
-      "$mainMod, Print, exec, grimblast --notify --cursor save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+      "$mainMod, Print, exec, grimblast --cursor copy area"
       ",Print, exec, grimblast --cursor copy screen"
     ];
 
