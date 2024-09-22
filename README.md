@@ -11,4 +11,4 @@ Includes:
 - kitty
 - swaylock
 - waybar
-- NVidia configuration
+- NVidia configurationr
