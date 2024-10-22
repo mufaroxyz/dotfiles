@@ -33,6 +33,8 @@ in
           ./system.nix
           ./nvidia.nix
           ./activation.nix
+          # ./nixvim
+          ./postgres.nix
           ../../hosts/nixos/hardware-configuration.nix
         ];
     };

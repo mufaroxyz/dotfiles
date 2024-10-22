@@ -19,6 +19,7 @@
     };
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprsysteminfo.url = "git+https://github.com/hyprwm/hyprsysteminfo";
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
@@ -43,6 +44,8 @@
       url = "github:catppuccin/starship";
       flake = false;
     };
+
+    nixvim.url = "github:nix-community/nixvim";
 
     # Requires access to ghostty-org
     ghostty = {

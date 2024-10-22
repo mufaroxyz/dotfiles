@@ -6,7 +6,7 @@ in
 {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
-    monitor = ",1920x1080@72,0x0,1";
+    monitor = ",1920x1080@72,auto,1";
 
     exec-once = [
       "systemctl --user import-environment"
@@ -53,7 +53,7 @@ in
     };
 
     dwindle = {
-      no_gaps_when_only = false;
+      # no_gaps_when_only = false;
       force_split = 0;
       special_scale_factor = 1.0;
       split_width_multiplier = 1.0;
@@ -65,7 +65,7 @@ in
     master = {
       # new_is_master = true;
       special_scale_factor = 1.0;
-      no_gaps_when_only = false;
+      # no_gaps_when_only = false;
     };
 
     xwayland = {
@@ -73,7 +73,7 @@ in
     };
 
     decoration = {
-      rounding = 10;
+      rounding = 5;
 
       active_opacity = 0.90;
       inactive_opacity = 0.90;

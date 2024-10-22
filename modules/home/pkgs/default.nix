@@ -22,6 +22,11 @@
     krita
     easyeffects
     vesktop
+    cava
+    bat
+    obsidian
+    obsidian-export
+    gdrive3
 
     xwaylandvideobridge
     egl-wayland
@@ -47,5 +52,14 @@
     unzip
     wget
     xdg-utils
+    btop
+    nvtop
+
+    neovim
+    nodejs_22
+    rustc
+    rustup
+    biome
+    jetbrains.webstorm
   ];
 }
