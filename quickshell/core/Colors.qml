@@ -1,0 +1,1 @@
+/home/mufaro/.dotfiles/akane/quickshell/assets/cache/67126be61312f09b83d97d181d4fb1ef812d9b74e753106c4dd9b79be460cb7a_colors.qml

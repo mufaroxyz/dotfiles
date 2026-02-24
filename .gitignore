@@ -1,2 +1,4 @@
 *.md
 .agents
+quickshell/assets
+__pycache__

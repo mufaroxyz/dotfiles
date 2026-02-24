@@ -19,7 +19,10 @@ QtObject {
     property int animFast: 150
     property int animSmooth: 300
 
-    property color surface: Qt.rgba(30 / 255, 30 / 255, 46 / 255, 0.4)
+    property color surface: Qt.rgba(30 / 255, 30 / 255, 46 / 255, 0.96)
     property color surfaceText: "#ffffff"
-    property color borderGlass: Qt.rgba(1, 1, 1, 0.1)
+    property color borderHighlight: Qt.rgba(1, 1, 1, 0.1)
+    property color borderGlass: borderHighlight
+    property real shadowOpacity: 0.15
+    property int shadowBlur: 30
 }
