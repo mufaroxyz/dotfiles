@@ -1,0 +1,2 @@
+# Preserve the imported legacy snapshot byte-for-byte.
+legacy/mufarodev-dotfiles/** -whitespace
