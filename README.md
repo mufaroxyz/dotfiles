@@ -18,6 +18,8 @@ Includes:
 | Host | Platform |
 | --- | --- |
 | `Odette` | `aarch64-darwin` |
+| `Evernight` | `aarch64-linux` (Home Manager) |
+| `Tsaritsa` | `x86_64-linux` (Home Manager) |
 | `nixos` | `x86_64-linux` |
 
 ```sh
@@ -28,5 +30,7 @@ nix flake update nixpkgs nix-darwin home-manager
 
 ```sh
 sudo darwin-rebuild switch --flake .#Odette
+home-manager switch --flake '.#mufaro@Evernight'
+home-manager switch --flake '.#mufaro@Tsaritsa'
 sudo nixos-rebuild switch --flake .#nixos
 ```

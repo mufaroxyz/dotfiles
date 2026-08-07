@@ -80,6 +80,17 @@
         ];
       };
 
+      homeConfigurations = {
+        "mufaro@Evernight" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.aarch64-linux;
+          modules = [ ./hosts/Evernight/home.nix ];
+        };
+        "mufaro@Tsaritsa" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [ ./hosts/Tsaritsa/home.nix ];
+        };
+      };
+
       nixosConfigurations.nixos = inputs.nixpkgs-linux.lib.nixosSystem {
         specialArgs = {
           inherit self;
