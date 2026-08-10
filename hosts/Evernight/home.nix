@@ -1,5 +1,5 @@
 {
-  imports = [ ../../modules/home/opencode.nix ];
+  imports = [ ../../modules/home/coding-agents.nix ];
 
   home = {
     username = "mufaro";

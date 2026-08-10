@@ -1,7 +1,7 @@
 {
   imports = [
     ../../modules/home/desktop-apps.nix
-    ../../modules/home/opencode.nix
+    ../../modules/home/coding-agents.nix
   ];
 
   home = {

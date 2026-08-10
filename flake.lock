@@ -72,6 +72,22 @@
         "type": "github"
       }
     },
+    "emilkowalski-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786370304,
+        "narHash": "sha256-pBOmerDsSTM5a24uKag8ahrwDRp6BL5pLAXbO8iwOsU=",
+        "owner": "emilkowalski",
+        "repo": "skills",
+        "rev": "78761e1b57f97dce65b983d640c70a68f39e8163",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emilkowalski",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -180,6 +196,22 @@
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "64c6325b28ebd708653dd41d88f306023f296184",
+        "type": "github"
+      }
+    },
+    "hugeicons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782295438,
+        "narHash": "sha256-mqWQ19pjnLPdZ7YEGmxFPTtRPz9pMcc0F6YhrQz9WEk=",
+        "owner": "hugeicons",
+        "repo": "hugeicons",
+        "rev": "3365154e0ae2461fbfb6249b89649127207a4f9e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hugeicons",
+        "repo": "hugeicons",
         "type": "github"
       }
     },
@@ -370,6 +402,22 @@
         "type": "github"
       }
     },
+    "jakubkrehel-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786019786,
+        "narHash": "sha256-jD6pu3ExkarkbFrULwANPordzOYDw3y5sMsyOBCetHs=",
+        "owner": "jakubkrehel",
+        "repo": "skills",
+        "rev": "d01493b0a7b976a74bfcedc80c783d60c7995910",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jakubkrehel",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "libnbtplusplus": {
       "flake": false,
       "locked": {
@@ -485,6 +533,22 @@
         "type": "github"
       }
     },
+    "ponytail": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786139041,
+        "narHash": "sha256-bGdXvzhWPwGdz3T2Yh2h6lf+3PBRFAfdBxP5pESmCHI=",
+        "owner": "DietrichGebert",
+        "repo": "ponytail",
+        "rev": "2ed6c52c9d7e5e56942508591085fd45dea277d3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DietrichGebert",
+        "repo": "ponytail",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -537,15 +601,21 @@
       "inputs": {
         "aagl": "aagl",
         "catppuccin-starship": "catppuccin-starship",
+        "emilkowalski-skills": "emilkowalski-skills",
         "home-manager": "home-manager",
         "home-manager-linux": "home-manager-linux",
+        "hugeicons": "hugeicons",
         "hypr-contrib": "hypr-contrib",
         "hyprland": "hyprland",
+        "jakubkrehel-skills": "jakubkrehel-skills",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs",
         "nixpkgs-linux": "nixpkgs-linux",
         "nur": "nur",
+        "ponytail": "ponytail",
         "prismlauncher": "prismlauncher",
+        "trailofbits-skills": "trailofbits-skills",
+        "vercel-skills": "vercel-skills",
         "zen-browser": "zen-browser"
       }
     },
@@ -561,6 +631,38 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "trailofbits-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786393634,
+        "narHash": "sha256-IviVltI80FUO0dc3WD4rwcNZn8HTfPl+AkjXY/4/06g=",
+        "owner": "trailofbits",
+        "repo": "skills",
+        "rev": "e6066e7db1fd57cb35f9a534781ceec595327feb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "trailofbits",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
+    "vercel-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786383100,
+        "narHash": "sha256-ysEI0AfD360OBRSKX+5HX60DCo0gM0eiuUkpfMIqZOg=",
+        "owner": "vercel-labs",
+        "repo": "skills",
+        "rev": "c6f69c631292444cc541ac6d91e2226b0ff247da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vercel-labs",
+        "repo": "skills",
         "type": "github"
       }
     },

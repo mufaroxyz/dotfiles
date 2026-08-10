@@ -52,6 +52,36 @@
       url = "github:catppuccin/starship/3c4749512e7d552adf48e75e5182a271392ab176";
       flake = false;
     };
+
+    trailofbits-skills = {
+      url = "github:trailofbits/skills";
+      flake = false;
+    };
+
+    vercel-skills = {
+      url = "github:vercel-labs/skills";
+      flake = false;
+    };
+
+    hugeicons = {
+      url = "github:hugeicons/hugeicons";
+      flake = false;
+    };
+
+    emilkowalski-skills = {
+      url = "github:emilkowalski/skills";
+      flake = false;
+    };
+
+    jakubkrehel-skills = {
+      url = "github:jakubkrehel/skills";
+      flake = false;
+    };
+
+    ponytail = {
+      url = "github:DietrichGebert/ponytail";
+      flake = false;
+    };
   };
 
   outputs =
@@ -74,6 +104,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
               users.mufaro = ./hosts/Odette/home.nix;
             };
           }
@@ -83,10 +114,12 @@
       homeConfigurations = {
         "mufaro@Evernight" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-linux;
+          extraSpecialArgs = { inherit inputs; };
           modules = [ ./hosts/Evernight/home.nix ];
         };
         "mufaro@Tsaritsa" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
           modules = [ ./hosts/Tsaritsa/home.nix ];
         };
       };
