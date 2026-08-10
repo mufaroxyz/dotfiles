@@ -1,6 +1,5 @@
 {
   nix.enable = false;
-  nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
   networking.computerName = "Odette";
   networking.hostName = "Odette";

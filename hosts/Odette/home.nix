@@ -9,10 +9,6 @@
 
   programs.home-manager.enable = true;
 
-  home.packages = with pkgs; [
-    discord
-  ];
-
   xdg.configFile."opencode/opencode.json" = {
     target = "opencode/opencode.jsonc";
     force = true;
