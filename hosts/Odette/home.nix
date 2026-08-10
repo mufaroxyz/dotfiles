@@ -1,4 +1,20 @@
 { lib, pkgs, ... }:
+let
+  codexConfigTemplate = pkgs.writeText "codex-config.toml" ''
+    model_provider = "openrouter"
+    model = "openai/gpt-5.6-sol"
+    model_reasoning_effort = "high"
+
+    [model_providers.openrouter]
+    name = "OpenRouter"
+    base_url = "https://openrouter.ai/api/v1"
+    wire_api = "responses"
+
+    [model_providers.openrouter.auth]
+    command = "sh"
+    args = ["-c", "echo $OPENROUTER_API_KEY"]
+  '';
+in
 {
   imports = [
     ../../modules/home/desktop-apps.nix
@@ -8,6 +24,24 @@
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
+
+  home.packages = with pkgs; [
+    codex
+    t3code
+  ];
+
+  # ponytail: Codex writes trusted-project settings to this file.
+  home.activation.codexConfig = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
+    codexConfigPath="$HOME/.codex/config.toml"
+    if [ -L "$codexConfigPath" ]; then
+      run rm "$codexConfigPath"
+    fi
+    if [ ! -e "$codexConfigPath" ] || [ -L "$codexConfigPath" ]; then
+      run mkdir -p "$HOME/.codex"
+      run cp ${codexConfigTemplate} "$codexConfigPath"
+      run chmod 600 "$codexConfigPath"
+    fi
+  '';
 
   xdg.configFile."opencode/opencode.json" = {
     target = "opencode/opencode.jsonc";
