@@ -1,10 +1,17 @@
 { lib, pkgs, ... }:
 {
-  imports = [ ../../modules/home/opencode.nix ];
+  imports = [
+    ../../modules/home/desktop-apps.nix
+    ../../modules/home/opencode.nix
+  ];
 
   home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
+
+  home.packages = with pkgs; [
+    discord
+  ];
 
   xdg.configFile."opencode/opencode.json" = {
     target = "opencode/opencode.jsonc";

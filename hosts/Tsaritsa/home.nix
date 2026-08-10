@@ -1,5 +1,8 @@
 {
-  imports = [ ../../modules/home/opencode.nix ];
+  imports = [
+    ../../modules/home/desktop-apps.nix
+    ../../modules/home/opencode.nix
+  ];
 
   home = {
     username = "mufaro";
