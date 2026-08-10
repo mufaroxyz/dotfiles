@@ -1,5 +1,17 @@
 { lib, pkgs, ... }:
 let
+  codex = pkgs.writeShellApplication {
+    name = "codex";
+    text = ''
+      if ! OPENROUTER_API_KEY=$(/usr/bin/security find-generic-password -a "$USER" -s OPENROUTER_API_KEY -w); then
+        echo "OPENROUTER_API_KEY is missing from macOS Keychain." >&2
+        exit 1
+      fi
+      export OPENROUTER_API_KEY
+      exec ${pkgs.codex}/bin/codex "$@"
+    '';
+  };
+
   codexConfigTemplate = pkgs.writeText "codex-config.toml" ''
     model_provider = "openrouter"
     model = "openai/gpt-5.6-sol"
@@ -9,10 +21,7 @@ let
     name = "OpenRouter"
     base_url = "https://openrouter.ai/api/v1"
     wire_api = "responses"
-
-    [model_providers.openrouter.auth]
-    command = "sh"
-    args = ["-c", "echo $OPENROUTER_API_KEY"]
+    env_key = "OPENROUTER_API_KEY"
   '';
 in
 {
@@ -25,9 +34,9 @@ in
 
   programs.home-manager.enable = true;
 
-  home.packages = with pkgs; [
+  home.packages = [
     codex
-    t3code
+    pkgs.t3code
   ];
 
   # ponytail: Codex writes trusted-project settings to this file.
