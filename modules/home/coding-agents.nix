@@ -59,7 +59,7 @@ in
     skills = localSkills;
     settings = {
       default_agent = "build";
-      small_model = "openrouter/openai/gpt-5.6-luna";
+      small_model = "openrouter/deepseek/deepseek-v4-flash-0731";
       plugin = [ "file://${inputs.ponytail}/.opencode/plugins/ponytail.mjs" ];
       mcp.exa = {
         type = "remote";
